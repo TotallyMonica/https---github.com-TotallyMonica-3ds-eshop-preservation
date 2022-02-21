@@ -1,7 +1,12 @@
 # TODO:
  - import games.csv -- Done
  - List games' title
+  - Due 2/28 CDT
  - determine what region(s) games are in
+  - Due 3/1 CDT
+ - manage Virtual Console games - manage Virtual Console games
+  - Due 3/8 CDT
  - use games.csv as a checklist for future games
- - manage Virtual Console games
+  - 4/1 CDT
  - be able to push game archives to archive.org or some other archival website
+  - Nice to have, not necessarily due immediately.

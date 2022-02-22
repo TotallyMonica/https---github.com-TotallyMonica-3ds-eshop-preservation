@@ -1,4 +1,10 @@
 import json
+import time
+import os
+import sys
+import platform
+
+from more_itertools import nth
 
 # import 3DS.csv as games
 def importGames (gameJSON):
@@ -71,6 +77,26 @@ def gamesInRegion (gameJSON):
         print(gameJSON[entry]['Title'])
 
 if __name__ == "__main__":
+    if platform.system() == "Linux":
+        logPath = '/tmp/list3DSGames.log'
+    elif platform.system() == "Windows":
+        logPath = 'C:\\Users\\' + os.getlogin() + '\\AppData\\Local\\Temp\\list3DSGames.log'
+    elif platform.system() == "Darwin":
+        logPath = '/Users/' + os.getlogin() + '/Library/Caches/TempraryItems/list3DSGames.log'
+    else:
+        print("Unable to automatically detect your operating system. Please specify where you want your logs saved to")
+        quit()
+
+    # Logging
+    if len(sys.argv) >= 2:
+        if sys.argv[2] == "--log":
+            try:
+                logfile = open(sys.argv[3], 'w')
+            except:
+                logfile = open(logPath, 'w')
+        
+
+
     games = json.load(open('3DS.json','r'))
     importGames(games)
     listGames(games)

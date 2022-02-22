@@ -1,8 +1,8 @@
 # TODO:
  - import games.csv -- Done
- - List games' title
+ - List games' title -- done
   - Due 2/28 CDT
- - determine what region(s) games are in
+ - determine what region(s) games are in -- done
   - Due 3/1 CDT
  - manage Virtual Console games - manage Virtual Console games
   - Due 3/8 CDT
